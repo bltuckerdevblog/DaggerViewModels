@@ -1,6 +1,6 @@
-package com.abnormallydriven.daggerviewmodels.common
+package com.abnormallydriven.daggerviewmodels
 
-import com.abnormallydriven.daggerviewmodels.DaggerViewModelApp
+import com.abnormallydriven.common.ViewModelModule
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
@@ -8,7 +8,9 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [(AndroidInjectionModule::class),
-    (ViewModelModule::class)])
+    (ViewModelModule::class),
+    (MainActivityInjectionModule::class)
+])
 interface AppComponent : AndroidInjector<DaggerViewModelApp> {
 
     @Component.Builder

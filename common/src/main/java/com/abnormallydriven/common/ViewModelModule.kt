@@ -1,4 +1,4 @@
-package com.abnormallydriven.daggerviewmodels.common
+package com.abnormallydriven.common
 
 import android.arch.lifecycle.ViewModelProvider
 import dagger.Binds
