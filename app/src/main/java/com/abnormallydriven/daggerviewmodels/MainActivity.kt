@@ -10,6 +10,7 @@ import android.widget.TextView
 import com.abnormallydriven.common.ViewModelFactory
 import com.abnormallydriven.common.alpha.AlphaActivityIntentFactory
 import com.abnormallydriven.common.bravo.BravoActivityIntentFactory
+import com.abnormallydriven.common.charlie.CharlieActivityIntentFactory
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
@@ -23,6 +24,9 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var bravoActivityIntentFactory: BravoActivityIntentFactory
+
+    @Inject
+    lateinit var charlieActivityIntentFactory: CharlieActivityIntentFactory
 
     private lateinit var viewModel: MainActivityViewModel
 
@@ -52,6 +56,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.charlie_button).setOnClickListener { v ->
             Log.d("debug", "charlie button click")
+            startActivity(charlieActivityIntentFactory.createCharlieActivityIntent(this@MainActivity))
         }
     }
 

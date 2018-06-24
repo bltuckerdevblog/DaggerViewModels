@@ -1,1 +1,1 @@
-include ':app', ':common', ':alpha', ':bravo'
+include ':app', ':common', ':alpha', ':bravo', ':charlie'

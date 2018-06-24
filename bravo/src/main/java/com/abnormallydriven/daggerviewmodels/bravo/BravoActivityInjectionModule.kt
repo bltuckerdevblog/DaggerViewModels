@@ -13,6 +13,6 @@ abstract class BravoActivityInjectionModule {
     @Binds
     @IntoMap
     @ActivityKey(BravoActivity::class)
-    abstract fun bindBravoActivityInjectorFactyory(builder: BravoActivitySubcomponent.Builder) :
+    abstract fun bindBravoActivityInjectorFactory(builder: BravoActivitySubcomponent.Builder) :
             AndroidInjector.Factory<out Activity>
 }
