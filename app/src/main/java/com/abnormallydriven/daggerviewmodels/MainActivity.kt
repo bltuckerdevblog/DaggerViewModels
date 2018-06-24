@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.abnormallydriven.common.ViewModelFactory
 import com.abnormallydriven.common.alpha.AlphaActivityIntentFactory
+import com.abnormallydriven.common.bravo.BravoActivityIntentFactory
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
@@ -19,6 +20,9 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var alphaActivityIntentFactory: AlphaActivityIntentFactory
+
+    @Inject
+    lateinit var bravoActivityIntentFactory: BravoActivityIntentFactory
 
     private lateinit var viewModel: MainActivityViewModel
 
@@ -43,6 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.bravo_button).setOnClickListener { v ->
             Log.d("debug", "bravo button click")
+            startActivity(bravoActivityIntentFactory.createBravoActivityIntent(this@MainActivity))
         }
 
         findViewById<Button>(R.id.charlie_button).setOnClickListener { v ->

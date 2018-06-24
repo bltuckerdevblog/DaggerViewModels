@@ -12,6 +12,6 @@ abstract class MainActivityModule {
     @Binds
     @IntoMap
     @ViewModelKey(MainActivityViewModel::class)
-    abstract fun bindProductsViewModel(mainActivityViewModel: MainActivityViewModel): ViewModel
+    abstract fun bindMainActivityViewModel(mainActivityViewModel: MainActivityViewModel): ViewModel
 
 }
